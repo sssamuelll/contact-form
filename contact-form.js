@@ -1,13 +1,16 @@
 import { LitElement, html, css } from "lit";
+import { styleMap } from 'lit/directives/style-map.js';
+import {property} from 'lit/decorators.js';
 
 import sheet from "./contact-form.css";
 
-export default class contactForm extends LitElement {
+
+export class contactForm extends LitElement {
+
     static styles = [sheet];
 
-    static properties = {
-        
-    }
+    @property({type:String, state:false})
+    background;
 
     constructor() {
         super();
@@ -17,9 +20,15 @@ export default class contactForm extends LitElement {
         super.connectedCallback();
     }
 
+    _submit() {
+
+    }
+
     render() {
+        var styles = { backgroundColor: this.background };
+        console.log(this.background);
         return html`
-            <form>
+            <form style=${styleMap(styles)}>
                 <div class="form-group row">
                     <label for="name_txt" class="col-4 col-form-label">Nombre</label> 
                     <div class="col-8">

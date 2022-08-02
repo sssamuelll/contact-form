@@ -21,12 +21,35 @@ export class contactForm extends LitElement {
     @property({type:String, state:false})
     margin;
 
+    @property({type:Boolean, state:false})
+    saved;
+
+    @property({type:Boolean, state:false})
+    updated;
+
+    @property({type:Boolean, state:false})
+    deleted;
+
+    @property({type:String, state:false})
+    method;
+
+    @property({type:String, state:false})
+    action;
+
+
+
     constructor() {
         super();
+        
         this.color = "black";
         this.background = "white";
         this.fontSize = "16px";
         this.margin = "10px";
+
+        this.method = "";
+        this.action = "";
+
+
     }
 
     connectedCallback() {
@@ -38,7 +61,8 @@ export class contactForm extends LitElement {
     }
 
     render() {
-        var styles = {  backgroundColor: this.background,
+        var styles = {  
+                        backgroundColor: this.background,
                         color: this.color,
                         fontSize: this.fontSize
         };
@@ -51,7 +75,7 @@ export class contactForm extends LitElement {
         var rowStyle = {
                         marginBottom: this.margin
         };
-        
+
         return html`
             <form style=${styleMap(styles)}>
                 <div class="form-group row" style=${styleMap(rowStyle)}>

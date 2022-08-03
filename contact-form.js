@@ -77,7 +77,7 @@ export class contactForm extends LitElement {
         };
 
         return html`
-            <form style=${styleMap(styles)}>
+            <form style=${styleMap(styles)} action="http://localhost/web_components/save.php" method="POST">
                 <div class="form-group row" style=${styleMap(rowStyle)}>
                     <label for="name_txt" class="col-4 col-form-label">Nombre:</label> 
                     <div class="col-8">

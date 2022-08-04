@@ -37,7 +37,6 @@ export class contactForm extends LitElement {
     action;
 
 
-
     constructor() {
         super();
         
@@ -154,7 +153,7 @@ export class contactForm extends LitElement {
                 <div class="form-group row" style=${styleMap(rowStyle)}>
                     <label for="text" class="col-4 col-form-label">Celular (Móvil):</label> 
                     <div class="col-8">
-                        <input id="text" name="text" type="text" class="form-control" style=${styleMap(inputStyle)}>
+                        <input id="mobile_nbr" name="mobile_nbr" type="text" class="form-control" style=${styleMap(inputStyle)}>
                     </div>
                 </div>
                 <div class="form-group row" style=${styleMap(rowStyle)}>
@@ -172,7 +171,7 @@ export class contactForm extends LitElement {
                 <br>
                 <div class="form-group row">
                     <div class="offset-4 col-8">
-                        <button name="submit" type="submit" class="btn btn-primary" style=${styleMap(buttonStyle)}>Guardar</button>
+                        <button type="submit" class="btn btn-primary" style=${styleMap(buttonStyle)}>Guardar</button>
                     </div>
                 </div>
             </form>
